@@ -1,19 +1,23 @@
-<!-- login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - GlobalBridge1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalBridge1 Login</title>
 </head>
 <body>
-  <h2>Login Page</h2>
-  <form action="dashboard.html" method="post">
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br>
-    <label>Password:</label><br>
-    <input type="password" name="password" required><br><br>
-    <input type="submit" value="Login">
+  <h2>Login to GlobalBridge1</h2>
+  <form onsubmit="return redirectToDashboard()">
+    <input type="text" placeholder="Username" required><br><br>
+    <input type="password" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
   </form>
+
+  <script>
+    function redirectToDashboard() {
+      window.location.href = "dashboard.html";
+      return false; // Prevent actual form submission
+    }
+  </script>
 </body>
 </html>
